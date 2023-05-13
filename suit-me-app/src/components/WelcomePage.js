@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./WelcomeStyles.css";
 import backgroundImage from "./images/measurements.jpg";
+import PopupContent from "./PopupContent";
+import Measurements from "./Measurements";
 
 const WelcomePage = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -51,8 +53,9 @@ const WelcomePage = () => {
           <div className="popup-frame">
             {!showNextStep && (
               <>
+                <PopupContent />
                 <h3>What is next?</h3>
-                <p>Here is some text about what to do next</p>
+                <p>Here is some tips about what to do next</p>
                 <button
                   className="welcome-button"
                   onClick={handleNextStepClick}
@@ -63,6 +66,7 @@ const WelcomePage = () => {
             )}
             {showNextStep && (
               <>
+                <Measurements />
                 <h3>Congratulations!</h3>
                 <p>You have completed the first step.</p>
                 <button className="welcome-button" onClick={handlePopupClose}>
