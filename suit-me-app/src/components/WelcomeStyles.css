@@ -1,35 +1,135 @@
 .welcome-container {
-  background-color: #f7f7f7;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-image: url("./images/measurements.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.welcome-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px; 
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.welcome-content {
+  text-align: center;
+  z-index: 1;
+  color: #c05757;
+  margin-top: -20vh; /* add this line */
 }
 
 .welcome-heading {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .welcome-subheading {
-  font-size: 24px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
 .welcome-description {
-  font-size: 18px;
   margin-bottom: 20px;
+  padding: 10px 80px;
+}
+
+.description-text {
+  font-size: 28px;
+  color: #58789b;
+  background-color: #d9dce0;
+  line-height: 1.5;
+}
+.welcome-description + .welcome-description {
+  margin-top: 20px;
+}
+.description-goal{
+  color: #c05757;
+  text-decoration: underline;
+ font-style: italic;
+} 
+.name{
+ text-transform: capitalize;
+ font-weight: bolder;
+ font-size: 36px;
 }
 
 .welcome-button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #c05757;
   color: #fff;
-  font-size: 16px;
+  font-size: 24px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.welcome-button:hover {
-  background-color: #0062cc;
+.popup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-frame {
+  background-color: #fff;
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.popup-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 767px) {
+  .welcome-content{
+    margin-top: 10px;
+  }
+  .welcome-heading {
+    font-size: 2rem;
+  }
+  .welcome-subheading {
+    font-size: 12px;
+  }
+  .welcome-description {
+    font-size: 8px;
+    line-height: 0.6;
+    padding: 0;
+  }
+  .welcome-button {
+    font-size: 2rem;
+  }
+  .description-goal{
+ margin: 0 auto;
+ padding: 0;
+} 
+.description-text {
+  font-size: 18px;
+  line-height: 1.3;
+}
 }
