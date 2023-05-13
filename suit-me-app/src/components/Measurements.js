@@ -15,21 +15,27 @@ const Measurements = () => {
         </thead>
         <tbody>
           <tr>
-            <td>Height (inches)</td>
+            <td>Height (cm)</td>
             <td>
               <input type="number" id="height" name="height" required />
             </td>
           </tr>
           <tr>
-            <td>Weight (pounds)</td>
+            <td>Weight (kg)</td>
             <td>
               <input type="number" id="weight" name="weight" required />
             </td>
           </tr>
           <tr>
-            <td>Waist (inches)</td>
+            <td> Waist(cm)</td>
             <td>
               <input type="number" id="waist" name="waist" required />
+            </td>
+          </tr>
+          <tr>
+            <td> Bra Size(cm)</td>
+            <td>
+              <input type="number" id="bra" name="bra" required />
             </td>
           </tr>
         </tbody>
