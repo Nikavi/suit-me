@@ -4,15 +4,20 @@ import backgroundImage from "./images/measurements.jpg";
 
 const WelcomePage = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [showNextStep, setShowNextStep] = useState(false);
 
   const handleGetStartedClick = () => {
     setShowPopup(true);
   };
 
   const handleNextStepClick = () => {
-    // Handle next step click
+    setShowNextStep(true);
   };
 
+  const handlePopupClose = () => {
+    setShowPopup(false);
+    setShowNextStep(false);
+  };
   return (
     <div className="welcome-container">
       <img src={backgroundImage} alt="" className="popup-image" />
@@ -44,11 +49,27 @@ const WelcomePage = () => {
       {showPopup && (
         <div className="popup-container">
           <div className="popup-frame">
-            <h3>What is now?</h3>
-            <p>Here is some text about what to do next</p>
-            <button className="welcome-button" onClick={handleNextStepClick}>
-              Next Step
-            </button>
+            {!showNextStep && (
+              <>
+                <h3>What is next?</h3>
+                <p>Here is some text about what to do next</p>
+                <button
+                  className="welcome-button"
+                  onClick={handleNextStepClick}
+                >
+                  Next Step
+                </button>
+              </>
+            )}
+            {showNextStep && (
+              <>
+                <h3>Congratulations!</h3>
+                <p>You have completed the first step.</p>
+                <button className="welcome-button" onClick={handlePopupClose}>
+                  Close
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}
