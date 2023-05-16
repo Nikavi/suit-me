@@ -31,6 +31,6 @@
     "package2": "^1.0.0"
   },
   "devDependencies": {
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^2.1.3"
   }
 }
