@@ -26,24 +26,7 @@ const WelcomePage = () => {
       <div className="welcome-content">
         <h1 className="welcome-heading">SuitMe</h1>
         <h2 className="welcome-subheading">Find Your Perfect Fit</h2>
-        <p className="welcome-description">
-          <span className="description-text">
-            SuitMe is an easy-to-use app that helps you find clothes that fit
-            you perfectly.
-            <br />
-            No more guessing your size or struggling with ill-fitting clothes.
-            With SuitMe, you can enter your body measurements and get
-            personalized size recommendations for different brands and styles.
-            Say goodbye to the frustration of shopping for clothes and hello to
-            a more confident, comfortable you. <br />
-            <br />
-            <span className="description-goal">
-              {" "}
-              Try <span className="name">SuitMe</span> today and experience the
-              difference!
-            </span>
-          </span>
-        </p>
+      
         <button className="welcome-button" onClick={handleGetStartedClick}>
           Get Started
         </button>
@@ -67,8 +50,6 @@ const WelcomePage = () => {
             {showNextStep && (
               <>
                 <Measurements />
-                <h3>Congratulations!</h3>
-                <p>You have completed the first step.</p>
                 <button className="welcome-button" onClick={handlePopupClose}>
                   Close
                 </button>
