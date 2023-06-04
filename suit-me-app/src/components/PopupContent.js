@@ -12,7 +12,7 @@ const PopupContent = () => {
       </p>
       <h3>How It Works</h3>
       <p>
-        To get started with SuitMe, you'll need to create an account and enter
+        To get started with SuitMe, you'll need to enter
         your body measurements. No more guessing your size or struggling with
         ill-fitting clothes. Once you've done that, you can browse our selection
         of clothing and filter by size, style, and brand. We'll show you

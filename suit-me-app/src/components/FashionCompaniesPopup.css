@@ -1,0 +1,79 @@
+.fashion-companies-popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    padding: 10px;
+  }
+}
+
+.popup-heading {
+  margin-top: 0;
+}
+
+.company-card {
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.company-description {
+  font-size: 14px;
+  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+.close-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #c0392b;
+}
+
+.company-website {
+  color: #c05757;
+  text-decoration: none;
+  font-size: 14px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+.company-website:hover {
+  text-decoration: underline;
+}
+
+.fashion-close {
+  padding: 10px 20px;
+  background-color: #c05757;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}

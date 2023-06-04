@@ -51,7 +51,14 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
+.welcome-button-close {
+   padding: 10px 20px;
+  background-color: #c05757;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .popup-container {
   position: fixed;
   top: 0;
@@ -98,8 +105,8 @@
     font-size: 2rem;
   }
 .popup-frame {
-  width: 90%;
-  height: 90%;
+  width: 50%;
+  height: 50%;
   
 }
 }
